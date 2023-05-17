@@ -1,16 +1,8 @@
 from flask import Flask, jsonify
 import mysql.connector
+from credentials import db_config
 
 app = Flask(__name__)
-
-# MySQL configuration
-db_config = {
-    'user': 'root',
-    'password': 'Pavan',
-    'host': 'localhost',
-    'database': 'mutual_fund_db',
-    'auth_plugin': 'mysql_native_password'
-}
 
 # API route
 @app.route('/data', methods=['GET'])
