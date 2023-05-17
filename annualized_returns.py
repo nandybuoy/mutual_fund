@@ -29,9 +29,12 @@ def get_data():
         # Iterate through the rows and create a dictionary for each row
         for row in rows:
             result = {
-                'id': row[0],
-                'name': row[1],
-                'description': row[2]
+                'index': row[0],
+                '1_year': row[1],
+                '2_year': row[2],
+                '3_year': row[3],
+                '7_year': row[4],
+                '10_year': row[5],
                 # Add more columns as needed
             }
             results.append(result)
@@ -49,3 +52,4 @@ def get_data():
 
 if __name__ == '__main__':
     app.run(port=8001)
+    get_data()
